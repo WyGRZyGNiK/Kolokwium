@@ -26,7 +26,7 @@ int main(){
 	plik.open("wyniki.txt", ios::out);
 	
 	cout<<"Zadanie 2.1"<<endl;
-	for(double &e:w){
+	for(double &e:w){//Zmodyfikowana petla
 		cout << e << " ";
 	}
 	cout<<endl;
@@ -75,3 +75,4 @@ int main(){
 	
 	return 0;
 }
+
