@@ -67,7 +67,37 @@ int main(){
 	
 	cout<<endl;
 	
-	
+	cout<<"Zadanie 4.2"<<endl;
+	string onp;
+	cin>>onp;
+	int x;
+	stack<int> s;
+	for(int i=0;i<onp.size();i++){
+		if(onp[i]=='+'){
+			x=s.top();
+			s.pop();
+			s.top()+=x;
+		}
+		else if(onp[i]=='-'){
+			x=s.top();
+			s.pop();
+			s.top()-=x;
+		}
+		else if(onp[i]=='*'){
+			x=s.top();
+			s.pop();
+			s.top()*=x;
+		}
+		else if(onp[i]=='/'){
+			x=s.top();
+			s.pop();
+			s.top()/=x;
+		}
+		else{
+			s.push(onp[i]-48);
+		}
+	}
+	cout<<s.top();
 	
 	
 	
@@ -75,4 +105,5 @@ int main(){
 	
 	return 0;
 }
+
 
